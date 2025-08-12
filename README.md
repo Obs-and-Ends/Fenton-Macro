@@ -9,21 +9,6 @@ This repo contains a SAS macro to calculate birthweight Z-scores and SGA/AGA/LGA
 
 ---
 
-## Method (LMS)
-For birthweight \(y\) and reference parameters \((L,M,S)\):
-\[
-Z =
-\begin{cases}
-\frac{(y/M)^L - 1}{L\cdot S}, & L \neq 0 \\
-\frac{\ln(y/M)}{S}, & L = 0
-\end{cases}
-\qquad
-\text{Percentile} = 100 \times \Phi(Z)
-\]
-Interpolation (default) linearly blends \(L,M,S\) across fractional weeks.
-
----
-
 ## Requirements
 **Input data (one row/infant):**
 - `sex` (`1` Male, `0` Female)
